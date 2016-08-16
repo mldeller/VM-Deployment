@@ -1,0 +1,23 @@
+Completely fill out DeployVM.xlsx and then "SAVE AS" DeployVM.csv
+
+Explanation of fields:
+Name: This will be the VM Name
+Cluster: The Host Cluster to place the VM on (Choose this first as other fields are dependent on the response here)
+Template: The template to use (choose from drop down)
+CustSpec: Leave as "AutoDeployScript"
+Folder: The VM folder to put the VM in (create this manually before running if it doesn't already exist) (Also must be a unique name)
+CPU: The number of CPU's
+RAM: The amount of Memory
+Datastore: The DS Cluster to put the VM on (Choose from drop down)
+DiskStorageFormat: Thin or EagerZeroThick (Choose from drop down)
+Network: The VLAN to place the VM on (Choose from drop down)
+IPAddress: The Server's IP (Reserve in IPAM before running)
+SubnetMask: The SNM for above IP (Choose from drop down, must match IP)
+Gateway: The DFG for above IP (Choose from drop down, must match IP)
+pDNS: Primary DNS
+sDNS: Secondary DNS
+Format64k: Leave '0' for non-DB's, change to '1' for DB servers (This will format the drives with 64k cluster size)
+Notes: Whatever you want, typically project #
+
+Cdrive: Default is 80 but we can go larger.  Values < 80 will be ignored
+B-Zdrive: Drives with a value > zero will be added to the server
